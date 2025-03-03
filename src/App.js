@@ -19,7 +19,7 @@ function App() {
         setUploading(true);
 
         try {
-            const response = await axios.post('http://localhost:3002/api/upload', formData, {
+            const response = await axios.post('https://mass-mail-backend.onrender.com/api/upload', formData, {
                 headers: { 'Content-Type': 'multipart/form-data' }
             });
 
@@ -41,7 +41,7 @@ function App() {
       }
 
         try {
-               await axios.post('http://localhost:/api/send-emails', {
+               await axios.post('https://mass-mail-backend.onrender.com/api/send-emails', {
                 from,
                 subject,
                 message,
